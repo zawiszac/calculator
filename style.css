@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+#buttons-container {
+    margin: 250px auto;
+    width: 20vw;
+    height: 20vw;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(1px, 1fr));
+    grid-template-rows: repeat(5, minmax(1px, 1fr));
+    grid-template-areas: 
+        "clear delete percentage multiplication"
+        "seven eight nine division"
+        "four five six addition"
+        "one two three subtraction"
+        "zero decimal sign equals";
+    gap: 3px;
+}
+
+.calc-button {
+    text-align: center;
+    font-size: 25px;
+}
+
+#clear {
+    grid-area: clear;
+}
+
+#delete {
+    grid-area: delete;
+}
+
+#percentage {
+    grid-area: percentage;
+}
+
+#multiply {
+    grid-area: multiplication;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#divide {
+    grid-area: division;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#add {
+    grid-area: addition;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#subtract {
+    grid-area: subtraction;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#sign {
+    grid-area: sign;
+}
+
+#equals {
+    grid-area: equals;
+}
