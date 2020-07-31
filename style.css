@@ -2,10 +2,44 @@
     box-sizing: border-box;
 }
 
+#calc-container {
+    background-color: rgb(49, 51, 77);
+    width: 450px;
+    height: 710px;
+    margin: 100px auto 0 auto;
+    border: 5px solid rgba(37, 37, 155, 0.39);
+    border-radius: 15px;
+}
+
+#display-container {
+    margin: 50px auto 10px auto;
+    width: 400px;
+    height: 125px;
+}
+
+#display {
+    margin: auto;
+    background-color: white;
+    height: 90%;
+    width: 98%;
+    border: 1px solid white;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 90px;
+}
+
+#display div {
+    border: 1px solid black;
+    height: 99%;
+    width: 95%;
+    margin: auto;
+}
+
+
 #buttons-container {
-    margin: 250px auto;
-    width: 20vw;
-    height: 20vw;
+    margin: auto;
+    width: 400px;
+    height: 500px;
     display: grid;
     grid-template-columns: repeat(4, minmax(1px, 1fr));
     grid-template-rows: repeat(5, minmax(1px, 1fr));
@@ -20,8 +54,19 @@
 
 .calc-button {
     text-align: center;
+    color: white;
     font-size: 25px;
+    background-color: rgb(120, 120, 131);
+    border: 1px solid rgb(120, 120, 131);
+    border-radius: 15px;
+    margin: 4px;
 }
+
+.calc-button:hover {
+    background-color: rgb(171, 171, 189);
+    color: black;
+}
+
 
 #clear {
     grid-area: clear;

@@ -14,7 +14,7 @@ function divide(x, y) {
     return x / y;
 }
 
-function operate(operator, x, y) {
+function operate(operator, args) {
 
     let result;
     switch (operator) {
@@ -34,7 +34,41 @@ function operate(operator, x, y) {
         case '/':
             result = divide(x.y);
             break;
+
+        case 'DEL':
+            break;
+        
+        case 'C':
+            break;
+        
+        case '%':
+            break;
+
+        case '+/-':
+            break;
+
+        case '=':
+            break;
     }
 
     return result;
 }
+
+function runCalculator() {
+
+    let display = document.getElementById('display');
+    let buttons = document.querySelectorAll('.calc-button');
+    let displayContent = "";
+    if (display.textContent !== undefined) displayContent = display.textContent;
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            let input = e.textContent;
+            displayContent += input;
+            e.textContent = displayContent;
+            console.log(displayContent);
+        });          
+    });
+}
+
+runCalculator();
