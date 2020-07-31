@@ -11,6 +11,10 @@ function multiply(x, y) {
 }
 
 function divide(x, y) {
+    if (y === 0) {
+        console.log('detected');
+        return "Error: Division by Zero.";
+    }
     return x / y;
 }
 
@@ -47,14 +51,30 @@ function runCalculator() {
     let leftOperandPresent = false;
     let operatorPresent = false;
     let resultPresent = false;
+    let decimalPresent = false;
 
     calcButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
-            if (!resultPresent) {
-                let input = e.target.textContent;
-                currentDisplay.textContent += input;
-                leftOperandPresent = true;
+            
+            if (resultPresent) {
+                currentDisplay.textContent = "";
+                storageDisplay.textContent = "";
+                leftOperandPresent = false;
+                operatorPresent = false;
+                resultPresent = false;
             }
+                let input = e.target.textContent;
+                if (input === '.') {
+                    if (!decimalPresent) {
+                        currentDisplay.textContent += input;
+                        decimalPresent = true;
+                    }
+                }
+                else {
+                    currentDisplay.textContent += input;
+                    leftOperandPresent = true;
+                }
+
         });
     });
 
@@ -80,8 +100,16 @@ function runCalculator() {
             let rightOperand = Number(currentDisplay.textContent);
             let result = operate(operator, leftOperand, rightOperand);
             storageDisplay.textContent += currentDisplay.textContent;
+            if (result % 1 != 0 && Number(result) == result) {
+                result = result.toFixed(5);
+            }
             currentDisplay.textContent = result;
-            leftOperandPresent = true;
+            if (result === "Error: Division by Zero."){
+                leftOperandPresent = false;
+            }
+            else {
+                leftOperandPresent = true;
+            }
             operatorPresent = false;
             resultPresent = true;
         }
@@ -108,6 +136,7 @@ function runCalculator() {
         if (leftOperandPresent && !operatorPresent) {
             currentDisplay.textContent = (Number(currentDisplay.textContent) * 0.01);
         }
+        resultPresent = true;
     });
 
     let signButton = document.getElementById('sign');
