@@ -24,15 +24,31 @@
     width: 98%;
     border: 1px solid white;
     border-radius: 15px;
-    text-align: center;
-    font-size: 90px;
+    text-align: right;
+    font-size: 26px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
 }
 
-#display div {
-    border: 1px solid black;
-    height: 99%;
-    width: 95%;
-    margin: auto;
+#storage-display {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 15px;;
+    /* background-color: chocolate; */
+    flex-grow: 1;
+    width: 98%;
+}
+
+#current-display {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 15px;
+    /* background-color: crimson; */
+    flex-grow: 1;
+    width: 98%;
 }
 
 
@@ -54,16 +70,46 @@
 
 .calc-button {
     text-align: center;
-    color: white;
+    color: black;
     font-size: 25px;
-    background-color: rgb(120, 120, 131);
-    border: 1px solid rgb(120, 120, 131);
+    background-color: rgb(148, 148, 156);
+    border: 1px solid rgb(148, 148, 156);
     border-radius: 15px;
     margin: 4px;
 }
 
 .calc-button:hover {
-    background-color: rgb(171, 171, 189);
+    background-color: rgb(81, 81, 90);
+    color: white;
+}
+
+.other-button {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background-color: rgb(209, 126, 31);
+    border: 1px solid rgb(209, 126, 31);
+    border-radius: 15px;
+    margin: 4px;
+}
+
+.other-button:hover {
+    background-color: rgb(241, 166, 104);
+}
+
+
+.op-button {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background-color: rgb(81, 81, 90);
+    border: 1px solid rgb(148, 148, 156);
+    border-radius: 15px;
+    margin: 4px;
+}
+
+.op-button:hover {
+    background-color: rgb(148, 148, 156);
     color: black;
 }
 
