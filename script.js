@@ -74,10 +74,11 @@ function runCalculator() {
                     currentDisplay.textContent += input;
                     leftOperandPresent = true;
                 }
-
         });
     });
 
+
+    // TODO: Evaluate the expression when an operator is pressed while there is already an operator in the display (without having to hit the equals button)
     opButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
             if (leftOperandPresent && !operatorPresent) {
