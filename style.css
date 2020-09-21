@@ -2,12 +2,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #2e323c;
+}
+
 #calc-container {
-    background-color: rgb(49, 51, 77);
+    background-color: rgb(133, 133, 133);
     width: 450px;
     height: 710px;
     margin: 100px auto 0 auto;
-    border: 5px solid rgba(37, 37, 155, 0.39);
+    border: 5px solid #2e323c;
     border-radius: 15px;
 }
 
@@ -70,16 +74,17 @@
 
 .calc-button {
     text-align: center;
-    color: black;
+    color: white;
     font-size: 25px;
-    background-color: rgb(148, 148, 156);
-    border: 1px solid rgb(148, 148, 156);
+    background-color: #2e323c;
+    border: 1px solid #2e323c;
     border-radius: 15px;
     margin: 4px;
 }
 
 .calc-button:hover {
-    background-color: rgb(81, 81, 90);
+    background-color: #222120;
+    border: 1px solid #222120;
     color: white;
 }
 
@@ -87,14 +92,15 @@
     text-align: center;
     color: white;
     font-size: 25px;
-    background-color: rgb(209, 126, 31);
-    border: 1px solid rgb(209, 126, 31);
+    background-color: rgb(34, 33, 32) ;
+    border: 1px solid rgb(34, 33, 32)  ;
     border-radius: 15px;
     margin: 4px;
 }
 
 .other-button:hover {
-    background-color: rgb(241, 166, 104);
+    background-color: rgb(177, 93, 15);
+    border: 1px solid rgb(177, 93, 15);
 }
 
 
@@ -102,15 +108,15 @@
     text-align: center;
     color: white;
     font-size: 25px;
-    background-color: rgb(81, 81, 90);
-    border: 1px solid rgb(148, 148, 156);
+    background-color: rgb(34, 33, 32);
+    border: 1px solid rgb(34, 33, 32) ;
     border-radius: 15px;
     margin: 4px;
 }
 
 .op-button:hover {
-    background-color: rgb(148, 148, 156);
-    color: black;
+    background-color: rgb(177, 93, 15);
+    border: 1px solid rgb(177, 93, 15);
 }
 
 

@@ -89,6 +89,7 @@ function runCalculator() {
                 storageDisplay.textContent = currentDisplay.textContent;
                 currentDisplay.textContent = "";
                 leftOperandPresent = false;
+                decimalPresent = false;
             }
         });
     });
@@ -113,6 +114,7 @@ function runCalculator() {
             }
             operatorPresent = false;
             resultPresent = true;
+            decimalPresent = false;
         }
     });
 
